@@ -34,9 +34,8 @@ router.get('/article/:id', (request, response) => {
         });
     } else {
         //SINON on change le statut à 404 et on affiche un message
-        response.status(404).send('Error 404: Nous ne trouvons pas l\'article correspondant');
+        response.status(404).render('404');
     }
-
     
 });
 
