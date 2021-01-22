@@ -50,7 +50,29 @@
 
       <main class="main-content pure-g">
 
+        <% for (const art of articles) { %>
         <article class="post pure-u-1 pure-u-md-1 pure-u-lg-1-2 pure-u-xl-1-3">
+            <div class="post-content post--category-histoire"
+            style="background-image: <%= art.img %>">
+              <header class="post-header">
+                <h2 class="post-title"><a href="article.html"><%= art.title %></a></h2>
+                <span class="post-image-caption"><%= art.sub_title %></span>
+  
+                <p class="post-meta">
+                  Par <a class="post-author" href="#"><%= art.author %></a> dans la catégorie <a class="post-category"
+                    href="#"><%= art.category %></a>
+                </p>
+              </header>
+              <main class="post-summary">
+                <p>
+                    <%= art.text %> <a href="#">[lire plus…]</a>
+                </p>
+              </main>
+            </div>
+          </article>
+          <% } %>
+
+        <!-- <article class="post pure-u-1 pure-u-md-1 pure-u-lg-1-2 pure-u-xl-1-3">
           <div class="post-content post--category-histoire"
           style="background-image: url(images/business-man-beer.jpg)">
             <header class="post-header">
@@ -187,7 +209,7 @@
               </p>
             </main>
           </div>
-        </article>
+        </article> -->
 
       </main>
 
