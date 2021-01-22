@@ -65,7 +65,8 @@
               </header>
               <main class="post-summary">
                 <p>
-                    <%= art.text %> <a href="#">[lire plus…]</a>
+                    <%let resume =  art.text.split(' ').slice(0,30).join(' ');%>
+                    <%= resume %> <a href="#">[lire plus…]</a>
                 </p>
               </main>
             </div>
