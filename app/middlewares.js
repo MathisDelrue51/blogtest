@@ -14,6 +14,6 @@ function lectureArticleJson(request, response, next) {
 
 
 module.exports = {
-    error,
+   error,
    lectureArticleJson
 };

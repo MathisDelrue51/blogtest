@@ -5,39 +5,16 @@ const router = express.Router();
 //On importe les données de nos pages
 const articles = require('../data/article.json');
 
-//Route vers la page d'acceuil
-router.get('/', (request, response) => {
-    response.render('index', {
-        articles
-    });
-});
+//on importe les fonctions contenues dans notre fichier routerFunctions
+const functions = require('./routerFunctions');
 
-//Route dynamiser vers les pages des articles
-router.get('/article/:id', (request, response) => {
-    //On récupère l'ID de la page
-    const idArticle = request.params.id;
+//Route vers la page d'acceuil. Fait appel à la fonction homepage contenue dans functions
+router.get('/', functions.homePage);
 
-    let articleExist;
+//Route dynamisée vers les pages des articles. Fait appel à la fonction articlePage contenue dans functions
+router.get('/article/:id', functions.articlePage);
 
-    //Pour chaque élément contenu dans notre liste d'article on vérifie si l'ID entré correspond à un article existant
-    for (const article of articles) {
-        if (idArticle == article.id) {
-            //Si c'est le cas notre élément articleExist prend la valeur de l'article (toutes ses données)
-            articleExist = article;            
-        }
-    }    
-
-    //SI l'article existe on affiche la vue de l'article en renvoyant les données dont on a besoin en paramètre de response.render
-    if (articleExist !== undefined) {
-        response.render('article', {
-            articles,
-            articleExist
-        });
-    } else {
-        //SINON on change le statut à 404 et on affiche un message
-        response.status(404).render('404');
-    }
-    
-});
+//Route dynamisée vers une page listant les articles d'une catégorie. Fait appel à la fonction categoryPage contenue dans functions
+router.get('/category/:name', functions.categoryPage);
 
 module.exports = router;
