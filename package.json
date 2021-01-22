@@ -1,0 +1,25 @@
+{
+  "name": "pracours_node",
+  "version": "1.0.0",
+  "description": "![Aperçu](integration/images/apercu.png \"Aperçu\")",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/O-clock-Quill/S03E08-OBlog-MathisDelrue51.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/O-clock-Quill/S03E08-OBlog-MathisDelrue51/issues"
+  },
+  "homepage": "https://github.com/O-clock-Quill/S03E08-OBlog-MathisDelrue51#readme",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1"
+  }
+}
