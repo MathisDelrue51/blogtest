@@ -16,7 +16,10 @@
                     </figure>
                     <main class="post-description">
                         <div class="post-text">
-                            <%= articleExist.text.split('\n\n').join(' ++++++ ')%>
+                            <%# chaque paragraphe est séparé par \n\n. on insère une balise html p pour chacun des paragraphe idéntifés  %>
+                            <% for (let paragraph of articleExist.text.split('\n\n')) { %>
+                                <p><%= paragraph %></p>
+                              <% } %>                           
                             
                         </div>
                     </main>

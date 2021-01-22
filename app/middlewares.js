@@ -1,3 +1,4 @@
+//lorsque la fonction est appelée, on renvoie le statue 404 et on affiche la page 404.ejs
 function error(request, response, next) {
     response.status(404).render('404');
 };

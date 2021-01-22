@@ -1,5 +1,6 @@
+<%# on utilise include pour faire appelle a notre header et reprendre toutes les infos contenues dedans %>
 <%- include('partials/header') %>
-
+<%# pour chaque article contenu dans notre article.json on affiche sont contenu (titre, autheur...) %>
         <% for (const art of articles) { %>
         <article class="post pure-u-1 pure-u-md-1 pure-u-lg-1-2 pure-u-xl-1-3">
           <div class="post-content post--category-histoire" style="background-image: url('<%= art.img %>')">
@@ -14,6 +15,7 @@
             </header>
             <main class="post-summary">
               <p>
+                <%# les mots sont entrecoupés par des espaces (utilisation de split). Et l'on souahite 30 afficher mots (slice). On remet un espace entre chacun de ces 30 mots (join)  %>
                 <%let resume =  art.text.split(' ').slice(0,30).join(' ');%>
                 <%= resume %> <a href="#">[lire plus…]</a>
               </p>
@@ -22,4 +24,5 @@
         </article>
         <% } %>     
 
+        <%# on utilise include pour faire appelle a notre footer et reprendre toutes les infos contenues dedans %>
       <%- include('partials/footer') %>
