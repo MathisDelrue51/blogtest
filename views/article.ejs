@@ -11,7 +11,7 @@
                         </p>
                     </header>
                     <figure>
-                        <img src="<%= articleExist.img %>" alt="<%= articleExist.img_alt %>">
+                        <img class="post-image" src="<%= articleExist.img %>" alt="<%= articleExist.img_alt %>">
                         <figcaption class="post-image-caption"><%= articleExist.sub_title %></figcaption>
                     </figure>
                     <main class="post-description">
@@ -19,7 +19,7 @@
                             <%# chaque paragraphe est séparé par \n\n. on insère une balise html p pour chacun des paragraphe idéntifés  %>
                             <% for (let paragraph of articleExist.text.split('\n\n')) { %>
                                 <p><%= paragraph %></p>
-                              <% } %>                           
+                              <% } %>                              
                             
                         </div>
                     </main>

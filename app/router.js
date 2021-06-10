@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 
 //On importe les données de nos pages
-const articles = require('../data/article.json');
+// const articles = require('../data/article.json');
 
 //on importe les fonctions contenues dans notre fichier routerFunctions
 const functions = require('./routerFunctions');

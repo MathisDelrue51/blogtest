@@ -57,8 +57,6 @@ const functions = {
             response.status(404).render('404');
         }
 
-
-
     }
 };
 
